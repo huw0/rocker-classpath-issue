@@ -1,0 +1,27 @@
+plugins {
+  id 'java'
+  id "com.fizzed.rocker" version "1.2.3"
+}
+
+repositories {
+     mavenLocal()
+     mavenCentral()
+}
+
+dependencies {
+  compile 'com.fizzed:rocker-runtime:1.2.3'
+  compile 'com.fizzed:rocker-compiler:1.2.3'
+}
+
+sourceSets {
+  main {
+    rocker {
+      srcDir('src/main/java')
+    }
+  }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
